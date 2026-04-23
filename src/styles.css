@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --page-bg: #fff8ee;
+  --page-bg-soft: #fffdfc;
+  --page-ink: #1e2a26;
+  --page-muted: #5d6b66;
+  --brand-green: #1f7a5a;
+  --brand-green-deep: #176449;
+  --brand-mint: #63c7a6;
+  --brand-orange: #f58a2c;
+  --brand-orange-soft: #ffd2a6;
+  --line: #e7ddd1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--page-ink);
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(900px 460px at -8% 0%, rgba(99, 199, 166, 0.18), transparent 58%),
+    radial-gradient(920px 520px at 108% 2%, rgba(245, 138, 44, 0.16), transparent 60%),
+    radial-gradient(780px 460px at 50% 110%, rgba(31, 122, 90, 0.08), transparent 60%),
+    linear-gradient(180deg, #fff8ee 0%, #fffaf2 42%, #fffdfc 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.48;
+  background:
+    radial-gradient(circle at 14% 14%, rgba(255, 255, 255, 0.72), transparent 30%),
+    radial-gradient(circle at 84% 22%, rgba(255, 255, 255, 0.52), transparent 28%),
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: auto, auto, 30px 30px, 30px 30px;
+  mask-image: radial-gradient(circle at 50% 28%, black, transparent 84%);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+a {
+  font: inherit;
+}
+
+button,
+a,
+input {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.display-title {
+  font-family: "Fraunces", Georgia, serif;
+}
+
+.rise-in {
+  animation: rise-in 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

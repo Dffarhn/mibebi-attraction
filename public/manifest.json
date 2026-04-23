@@ -1,0 +1,17 @@
+{
+  "short_name": "Mibebi",
+  "name": "Mibebi - Website Resto dalam 5 Menit, Gratis!",
+  "description": "Landing page Mibebi untuk aktivasi website resto gratis dan poles AI menu digital.",
+  "icons": [
+    {
+      "src": "/LogoMibebiTransparan.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#FFF8EE",
+  "background_color": "#FFFDFC"
+}
